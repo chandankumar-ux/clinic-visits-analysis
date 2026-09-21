@@ -1,78 +1,106 @@
-# Mini-Project 2 — MediCare Outpatient Visits: End-to-End Data Analysis
+# Clinic Visits Analysis
 
-**Python for Full Stack Data Science with AI & Generative AI · Naresh IT · Lead Trainer: Ajit Byru**
+An end-to-end data analysis project exploring clinic visit data to uncover patterns in patient demographics, departments, waiting times, consultation duration, fees, and follow-up behavior.
 
-You are the data analyst for MediCare's outpatient clinic. The administrator has one year of visit records and needs answers she can act on in 2026. Your job: clean the data honestly, answer five guided questions with charts, investigate one question of your own, and present a recommendation.
+## Overview
 
-## Files
+Healthcare organizations generate large amounts of operational data during patient visits. This project uses Python and data analysis techniques to explore that data and identify useful patterns related to patient visits and clinic operations.
 
-| File | What it is |
-|---|---|
-| `clinic_visits_2025.csv` | Raw export — ~2,400 visits, deliberately messy |
-| `clinic_visits_analysis_student.ipynb` | Your notebook. Fill every `# YOUR CODE HERE` and every *Reading:* line |
-| `README.md` | This file — becomes the README of your GitHub repo |
+The analysis covers data cleaning, exploratory data analysis, statistical analysis, probability, sampling, and visualization.
 
-## Rules
+## Objectives
 
-- **No `sklearn`, no models.** Insight, not prediction. Module 16 is next.
-- Every cleaning decision goes in the **Data-Quality Log** with rows affected and *why this fix rather than another*.
-- Every question ends in a **chart with a title, axis labels, and a one-sentence reading**.
-- Notebook must run top-to-bottom in a fresh kernel (Runtime → Restart and run all) before submission.
-- Use AI assistants for syntax, not for decisions. In the viva you will be asked to explain any line.
+- Clean and prepare clinic visit data for analysis
+- Explore patient and visit characteristics
+- Analyze waiting and consultation times
+- Compare departments and cities
+- Analyze consultation fees and identify potential outliers
+- Investigate follow-up visit patterns
+- Apply probability concepts to real-world data
+- Explore sampling distributions and the Central Limit Theorem
+- Communicate findings through clear visualizations
 
-## Definition of done
+## Dataset
 
-- [ ] Data-Quality Log has 7 rows, each with rows affected and a reason
-- [ ] Final clean shape printed and matches the acceptance number given in class
-- [ ] Q1–Q5 each have a chart and a *Reading:* sentence
-- [ ] Own question: one `groupby`, one chart, one defended statistic, one "what I'd need to be sure"
-- [ ] Recommendation paragraph, 120–180 words, addressed to the administrator
-- [ ] Five slides (template below) as PDF or PPTX
-- [ ] README: cleaning-log summary + answers to the five interview questions
-- [ ] Notebook runs clean from a fresh kernel
+The dataset contains clinic visit records with information such as:
 
-## The five-slide template
+- Patient and visit identifiers
+- Visit dates
+- Medical departments
+- Doctors
+- Patient age and gender
+- City
+- Waiting time
+- Consultation duration
+- Consultation fees
+- Payment method
+- Follow-up status
+- Procedure information
 
-| Slide | Title | Content |
-|---|---|---|
-| 1 | The question | One sentence: what the administrator asked. One line: the data (rows, period, columns). |
-| 2 | Data & cleaning | The 7-row log as a compact table. Bold the one decision you're proudest of. |
-| 3 | Three findings | Three charts, three one-line readings. One must be from your own question. |
-| 4 | Recommendation | The paragraph, cut to 3 bullets + the one number that proves it. |
-| 5 | What I'd do next | What you'd check with more data · one thing you'd change · "Next: predict consult time from age + department + doctor". |
+## Analysis
 
-**Two-minute pitch order:** slide 1 (15 s) → slide 3 (60 s) → slide 4 (30 s) → slide 5 (15 s). Skip slide 2 unless asked.
+### Data Cleaning
 
-## The five interview questions (answer these in your README)
+The data preparation process includes:
 
-1. **Why did you keep the ₹50,000 fees when the outlier rule flagged them?**
-2. **Your first date parse produced 83 Sunday visits. How did you catch it, and how did you fix it?**
-3. **Why per-department median for missing fees instead of the overall median or the mean?**
-4. **Cardiology's mean fee is ₹2,021 and its median is ₹1,260. Which one goes in the annual report?**
-5. **What is one decision in your log you would change if you had more data?**
+- Handling missing values
+- Standardizing categorical values
+- Validating dates
+- Checking data types
+- Identifying duplicate records
+- Detecting unusual or invalid values
+- Identifying potential fee outliers
 
-## Grading (20 marks)
+### Exploratory Data Analysis
 
-| Criterion | Marks |
-|---|---|
-| Data-Quality Log — problems found, fixes justified | 5 |
-| Q1–Q5 correct, charted, read | 5 |
-| Own question — depth and defended statistic | 3 |
-| Recommendation paragraph — specific, numeric, actionable | 3 |
-| Reproducibility & hygiene — fresh-kernel run, README, slides | 2 |
-| Viva & pitch | 2 |
+The analysis investigates:
 
-## Setup
+- Patient age distribution
+- Department-level visit patterns
+- City-level differences
+- Waiting time distribution
+- Consultation duration
+- Consultation fee patterns
+- Payment methods
+- Follow-up behavior
 
-Works in Google Colab (upload the CSV) or locally:
+### Statistical Analysis
 
-```bash
-pip install numpy pandas matplotlib jupyter
-jupyter notebook clinic_visits_analysis_student.ipynb
-```
-Works in Google Colab (upload the CSV) or locally:
+The project also explores:
 
-```bash
-pip install numpy pandas matplotlib jupyter
-jupyter notebook clinic_visits_analysis_student.ipynb
-```
+- Descriptive statistics
+- Probability of specific patient/visit events
+- Relationships between numerical variables
+- Sampling distributions
+- Central Limit Theorem
+- Outlier detection using the IQR method
+
+## Visualizations
+
+The project uses visualizations to understand patterns and relationships in the data, including:
+
+- Histograms
+- Box plots
+- Bar charts
+- 2D histograms
+- Correlation heatmaps
+
+## Tech Stack
+
+- **Python**
+- **Pandas** – data manipulation and analysis
+- **NumPy** – numerical computing
+- **Matplotlib** – data visualization
+- **Seaborn** – statistical visualization
+- **Jupyter Notebook** – analysis environment
+
+## Project Structure
+
+```text
+clinic-visits-analysis/
+│
+├── starter/
+│   ├── README.md
+│   └── clinic_visits_2025.csv
+│
+└── README.md
