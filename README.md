@@ -100,7 +100,7 @@ The project uses visualizations to understand patterns and relationships in the 
 clinic-visits-analysis/
 │
 ├── starter/
-│   ├── README.md
+│   ├── clinic_visits_analysis_solution.ipynb
 │   └── clinic_visits_2025.csv
 │
 └── README.md
